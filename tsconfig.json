@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "baseUrl": "."
-     "paths": {
+    "baseUrl": ".",
+    "paths": {
       "@": ["src/*"]
-     }
+    }
   },
   "files": [],
   "references": [
