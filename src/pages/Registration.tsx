@@ -11,11 +11,18 @@ const RegistrationArea = styled.div`
   padding: 2rem;
 `
 
+const RegistrationArea = styled.div`
+  backgroud: #666;
+`
+
 const RegistrationImage = styled.div`
   background: url('/login-image.svg') no-repeat center center;
   background-size: cover;
   height: 100vh;
+
   width: 100%;
+
+  width: 50vw;
 `
 
 function Registration() {
@@ -44,5 +51,10 @@ function Registration() {
     </Box>
   )
 }
+
+;<>
+  <RegistrationArea>Registration</RegistrationArea>
+  <RegistrationImage />
+</>
 
 export default Registration
