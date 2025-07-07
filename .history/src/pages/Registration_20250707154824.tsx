@@ -1,5 +1,5 @@
 import { Box, Container, Grid } from '@mui/material'
-import { BannerImage, FormComponent } from '@/components'
+import { BannerImage } from '@/components'
 
 
 
@@ -17,20 +17,7 @@ function Registration() {
           }}
         >
           <Container maxWidth="sm">
-            <h1>Cadastro</h1>
-            <FormComponent
-              inputs={[
-                { type: 'email', placeholder: 'Email' },
-                { type: 'password', placeholder: 'Senha' }
-              ]}
-              buttons={[
-                { className: 'primary', type: 'submit', children: 'Login' }
-              ]}
-              messages={{
-                message: 'ERRO!!!',
-                type: 'error',
-              }}
-            />
+            <h1>Registration</h1>
           </Container>
         </Grid>
 

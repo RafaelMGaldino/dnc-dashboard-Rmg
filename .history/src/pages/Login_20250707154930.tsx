@@ -3,41 +3,28 @@ import { BannerImage, FormComponent } from '@/components'
 
 
 
-function Registration() {
+function Login() {
   return (
     <Box sx={{ height: '100vh', width: '100vw', overflow: 'hidden' }}>
-      <Grid container sx={{ width: '100%', height: '100vh' }}>
+      <Grid container sx={{ height: '100vh', width: '100vw' }}>
         <Grid
           component="div"
           sx={{
-            width: '50%', // 6 colunas em 12 = 50%
+            width: '50%', // largura 50%
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
           }}
         >
           <Container maxWidth="sm">
-            <h1>Cadastro</h1>
-            <FormComponent
-              inputs={[
-                { type: 'email', placeholder: 'Email' },
-                { type: 'password', placeholder: 'Senha' }
-              ]}
-              buttons={[
-                { className: 'primary', type: 'submit', children: 'Login' }
-              ]}
-              messages={{
-                message: 'ERRO!!!',
-                type: 'error',
-              }}
-            />
+            <h1>Login</h1>
           </Container>
         </Grid>
 
         <Grid
           component="div"
           sx={{
-            width: '50%',
+            width: '50%', // largura 50%
             height: '100vh',
             display: 'flex',
             justifyContent: 'center',
@@ -51,4 +38,4 @@ function Registration() {
   )
 }
 
-export default Registration
+export default Login

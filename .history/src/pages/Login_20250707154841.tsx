@@ -1,7 +1,23 @@
 import { Box, Container, Grid } from '@mui/material'
-import { BannerImage, FormComponent } from '@/components'
+import { BannerImage } from '@/components'
 
 
+const LoginArea = styled.div`
+  background: #666;
+  color: white;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+`
+
+const LoginImage = styled.div`
+  background: url('/login-image.svg') no-repeat center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+`
 
 function Login() {
   return (
@@ -17,21 +33,7 @@ function Login() {
           }}
         >
           <Container maxWidth="sm">
-            <h1>Login</h1>
-            <FormComponent
-              inputs={[
-                { type: 'email', placeholder: 'Email' },
-                { type: 'password', placeholder: 'Senha' }
-              ]}
-              buttons={[
-                { className: 'alert', type: 'submit', children: 'Login' }
-              ]}
-              messages={{
-                message: 'Sucesso!!!',
-                type: 'success'
-              }}
-            />
-
+            <LoginArea>Login</LoginArea>
           </Container>
         </Grid>
 
@@ -45,7 +47,7 @@ function Login() {
             alignItems: 'center',
           }}
         >
-          <BannerImage />
+          <LoginImage />
         </Grid>
       </Grid>
     </Box>

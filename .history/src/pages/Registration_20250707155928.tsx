@@ -17,7 +17,7 @@ function Registration() {
           }}
         >
           <Container maxWidth="sm">
-            <h1>Cadastro</h1>
+            <h1>Registration</h1>
             <FormComponent
               inputs={[
                 { type: 'email', placeholder: 'Email' },
@@ -27,8 +27,8 @@ function Registration() {
                 { className: 'primary', type: 'submit', children: 'Login' }
               ]}
               messages={{
-                message: 'ERRO!!!',
-                type: 'error',
+                message: 'Sucesso!!!',
+                type: 'success'
               }}
             />
           </Container>

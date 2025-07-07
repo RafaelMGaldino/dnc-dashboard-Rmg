@@ -1,5 +1,5 @@
 import { Box, Container, Grid } from '@mui/material'
-import { BannerImage, FormComponent } from '@/components'
+import { BannerImage } from '@/components'
 
 
 
@@ -18,20 +18,6 @@ function Login() {
         >
           <Container maxWidth="sm">
             <h1>Login</h1>
-            <FormComponent
-              inputs={[
-                { type: 'email', placeholder: 'Email' },
-                { type: 'password', placeholder: 'Senha' }
-              ]}
-              buttons={[
-                { className: 'alert', type: 'submit', children: 'Login' }
-              ]}
-              messages={{
-                message: 'Sucesso!!!',
-                type: 'success'
-              }}
-            />
-
           </Container>
         </Grid>
 
@@ -45,7 +31,7 @@ function Login() {
             alignItems: 'center',
           }}
         >
-          <BannerImage />
+          <LoginImage />
         </Grid>
       </Grid>
     </Box>

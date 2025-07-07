@@ -27,8 +27,8 @@ function Registration() {
                 { className: 'primary', type: 'submit', children: 'Login' }
               ]}
               messages={{
-                message: 'ERRO!!!',
-                type: 'error',
+                message: 'Sucesso!!!',
+                type: 'error'
               }}
             />
           </Container>
