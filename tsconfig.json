@@ -2,16 +2,17 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "ESNext",
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "moduleResolution": "bundler",
-    "baseUrl": "src",
-    "paths": {
-      "@theme-types": ["types/theme.d.ts"]
-    },
+    "moduleResolution": "node",
     "jsx": "react-jsx",
     "strict": true,
     "noEmit": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "baseUrl": "src",
+    "paths": {
+      "@theme-types": ["types/theme.d.ts"]
+    }
   },
   "include": ["src"]
 }
