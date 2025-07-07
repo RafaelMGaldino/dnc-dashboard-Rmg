@@ -2,10 +2,12 @@
   "name": "dnc-sales-dashborad-rmg",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -37,5 +39,9 @@
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.34.1",
     "vite": "^7.0.0"
+  },
+  "build": {
+    "env": {},
+    "cache": false
   }
 }
