@@ -23,11 +23,11 @@ const LoginImage = styled.div`
 function Login() {
   return (
     <Box sx={{ height: '100vh', width: '100vw', overflow: 'hidden' }}>
-      <Grid container sx={{ width: '100%', height: '100vh' }}>
+      <Grid container sx={{ height: '100vh', width: '100vw' }}>
         <Grid
-          item
+          component="div"
           sx={{
-            width: '50%',
+            width: '50%', // largura 50%
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
@@ -39,9 +39,9 @@ function Login() {
         </Grid>
 
         <Grid
-          item
+          component="div"
           sx={{
-            width: '50%',
+            width: '50%', // largura 50%
             height: '100vh',
             display: 'flex',
             justifyContent: 'center',

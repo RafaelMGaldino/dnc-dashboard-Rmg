@@ -25,21 +25,21 @@ function Registration() {
     <Box sx={{ height: '100vh', width: '100vw', overflow: 'hidden' }}>
       <Grid container sx={{ width: '100%', height: '100vh' }}>
         <Grid
-          item
+          component="div"
           sx={{
-            width: '50%',
+            width: '50%', // 6 colunas em 12 = 50%
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
           }}
         >
           <Container maxWidth="sm">
-            <RegistrationArea>Login</RegistrationArea>
+            <RegistrationArea>Registration</RegistrationArea>
           </Container>
         </Grid>
 
         <Grid
-          item
+          component="div"
           sx={{
             width: '50%',
             height: '100vh',
