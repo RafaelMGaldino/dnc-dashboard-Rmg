@@ -1,4 +1,4 @@
-export interface Theme {
+export type Theme = {
   appBackground: string
   appColor: string
   appDefaultStroke: string

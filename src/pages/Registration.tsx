@@ -1,48 +1,51 @@
 import styled from 'styled-components'
-import { Box, Container, Grid } from '@mui/material'
+import Box from '@mui/material/Box'
+import Grid from '@mui/material/Grid'
+import Container from '@mui/material/Container'
 
 const RegistrationArea = styled.div`
   background: #666;
   color: white;
-  height: 100vh;
+  height: 50vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 2rem;
-`
-
-const RegistrationArea = styled.div`
-  backgroud: #666;
+  align-items: center;
+  font-size: 2rem;
 `
 
 const RegistrationImage = styled.div`
   background: url('/login-image.svg') no-repeat center center;
   background-size: cover;
-  height: 100vh;
-
+  height: 100%;
   width: 100%;
-
-  width: 50vw;
 `
 
 function Registration() {
   return (
-    <Box sx={{ height: '100vh' }}>
-      <Grid container columns={12} sx={{ height: '100%' }}>
+    <Box sx={{ height: '100vh', width: '100vw', overflow: 'hidden' }}>
+      <Grid container sx={{ width: '100%', height: '100vh' }}>
         <Grid
-          gridColumn={{ xs: 'span 12', sm: 'span 6' }}
-          sx={{ display: 'flex', alignItems: 'center', height: '100%' }}
+          item
+          sx={{
+            width: '50%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
         >
           <Container maxWidth="sm">
-            <RegistrationArea>Registration</RegistrationArea>
+            <RegistrationArea>Login</RegistrationArea>
           </Container>
         </Grid>
+
         <Grid
-          gridColumn={{ sm: 'span 6' }}
+          item
           sx={{
-            display: { xs: 'none', sm: 'block' },
-            height: '100%',
-            padding: 0,
+            width: '50%',
+            height: '100vh',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <RegistrationImage />
@@ -51,10 +54,5 @@ function Registration() {
     </Box>
   )
 }
-
-;<>
-  <RegistrationArea>Registration</RegistrationArea>
-  <RegistrationImage />
-</>
 
 export default Registration
