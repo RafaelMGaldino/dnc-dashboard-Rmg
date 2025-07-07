@@ -1,6 +1,22 @@
 import { Box, Container, Grid } from '@mui/material'
 import { BannerImage } from '@/components'
 
+const RegistrationArea = styled.div`
+  background: #666;
+  color: white;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+`
+
+const RegistrationImage = styled.div`
+  background: url('/login-image.svg') no-repeat center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+`
 
 function Registration() {
   return (
@@ -16,7 +32,7 @@ function Registration() {
           }}
         >
           <Container maxWidth="sm">
-            <h1>Registration</h1>
+            <RegistrationArea>Registration</RegistrationArea>
           </Container>
         </Grid>
 
@@ -30,7 +46,7 @@ function Registration() {
             alignItems: 'center',
           }}
         >
-          <BannerImage />
+          <RegistrationImage />
         </Grid>
       </Grid>
     </Box>

@@ -16,7 +16,7 @@ function Registration() {
           }}
         >
           <Container maxWidth="sm">
-            <h1>Registration</h1>
+            <RegistrationArea>Registration</RegistrationArea>
           </Container>
         </Grid>
 
