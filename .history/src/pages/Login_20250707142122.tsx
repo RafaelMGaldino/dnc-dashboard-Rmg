@@ -1,5 +1,7 @@
 import styled from 'styled-components'
-import { Box, Container, Grid } from '@mui/material'
+import Box from '@mui/material/Box'
+import Grid from '@mui/material/Grid'
+import Container from '@mui/material/Container'
 
 const LoginArea = styled.div`
   background: #666;

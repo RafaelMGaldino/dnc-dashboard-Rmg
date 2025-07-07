@@ -1,7 +1,9 @@
 import styled from 'styled-components'
-import { Box, Container, Grid } from '@mui/material'
+import Box from '@mui/material/Box'
+import Grid from '@mui/material/Grid'
+import Container from '@mui/material/Container'
 
-const LoginArea = styled.div`
+const RegistrationArea = styled.div`
   background: #666;
   color: white;
   height: 50vh;
@@ -11,46 +13,46 @@ const LoginArea = styled.div`
   font-size: 2rem;
 `
 
-const LoginImage = styled.div`
+const RegistrationImage = styled.div`
   background: url('/login-image.svg') no-repeat center center;
   background-size: cover;
   height: 100%;
   width: 100%;
 `
 
-function Login() {
+function Registration() {
   return (
     <Box sx={{ height: '100vh', width: '100vw', overflow: 'hidden' }}>
-      <Grid container sx={{ height: '100vh', width: '100vw' }}>
+      <Grid container sx={{ width: '100%', height: '100vh' }}>
         <Grid
           component="div"
           sx={{
-            width: '50%', // largura 50%
+            width: '50%', // 6 colunas em 12 = 50%
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
           }}
         >
           <Container maxWidth="sm">
-            <LoginArea>Login</LoginArea>
+            <RegistrationArea>Registration</RegistrationArea>
           </Container>
         </Grid>
 
         <Grid
           component="div"
           sx={{
-            width: '50%', // largura 50%
+            width: '50%',
             height: '100vh',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
           }}
         >
-          <LoginImage />
+          <RegistrationImage />
         </Grid>
       </Grid>
     </Box>
   )
 }
 
-export default Login
+export default Registration
