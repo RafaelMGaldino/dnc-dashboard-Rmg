@@ -4,6 +4,7 @@ import type { Theme } from '@/types'; // ou o caminho real para onde você defin
 
 declare module 'styled-components' {
   export interface DefaultTheme extends Theme {}
+}
 
     buttons: {
       primary: string;
@@ -26,3 +27,4 @@ declare module 'styled-components' {
     };
    
   }
+}
