@@ -74,7 +74,7 @@ export const darkTheme: Theme = {
     disabledBorderColor: '#2E3F55',
     disabledColor: '#58677C',
     placeholder: '#89A7CE',
-    placeholderColor:'#89A7CE',
+     placeholderColor:'#89A7CE';
   },
   typographies: {
     error: '#FF0202',
