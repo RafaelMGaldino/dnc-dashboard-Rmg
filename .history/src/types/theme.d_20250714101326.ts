@@ -1,4 +1,4 @@
-export interface Theme {
+export type Theme = {
   appBackground: string
   appColor: string
   appDefaultStroke: string
@@ -30,7 +30,7 @@ export interface Theme {
     disabledBorderColor: string
     disabledColor: string
     placeholder: string
-    placeholderColor: string
+    placeholderColor: string;
   }
   typographies: {
     error: string

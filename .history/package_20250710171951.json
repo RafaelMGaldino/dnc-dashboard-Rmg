@@ -1,5 +1,5 @@
 {
-  "name": "dnc-sales-dashborad-rmg",
+  "name": "dnc-sales-dashboard-rmg",
   "private": true,
   "version": "0.0.0",
   "engines": {
@@ -15,7 +15,6 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/material": "^7.2.0",
-    "@types/styled-components": "^5.1.34",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.3",
@@ -27,6 +26,7 @@
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@types/react-router-dom": "^5.3.3",
+    "@types/styled-components": "^5.1.34",
     "@vitejs/plugin-react": "^4.5.2",
     "eslint": "^9.29.0",
     "eslint-config-prettier": "^10.1.5",
@@ -39,9 +39,5 @@
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.34.1",
     "vite": "^7.0.0"
-  },
-  "build": {
-    "env": {},
-    "cache": false
   }
 }

@@ -68,16 +68,4 @@ export const darkTheme: Theme = {
   textInput: {
     active: '#0F1535',
     activeColor: '#FFFFFF',
-    borderColor: '#21497D',
-    disabled: '#282D49',
-    disabledBorderColor: '#2E3F55',
-    disabledColor: '#58677C',
-    placeholder: '#89A7CE',
-    placeholderColor: '#89A7CE',
-  },
-  typographies: {
-    error: '#FF0202',
-    subtitle: '#89A7CE',
-    success: '#008000',
-  },
-}
+    bord
