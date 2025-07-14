@@ -7,7 +7,7 @@ function Home() {
     <>
        <Header/>
        <Container maxWidth='lg'>
-        <CardComponent  className='alert'>Card</CardComponent>
+        <CardComponent  className='warning'>Card</CardComponent>
 
        </Container>
       

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import type { TypographiesProps } from '@/types'
-import { pxToRem } from '@/utils'
+import { pxToRem } from '@/utils/pxToRem'
 
 
 export const StyledH1 = styled.h1<TypographiesProps>`
@@ -46,3 +46,7 @@ list-style-position: inside;
       margin-left: ${pxToRem(15)}
   }
 `
+
+
+
+

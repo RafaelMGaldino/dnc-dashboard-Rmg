@@ -2,19 +2,34 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "ESNext",
+<<<<<<< HEAD
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "baseUrl": "src",
     "paths": {
-      "@/*": ["src/*"],
+
       "@theme-types": ["types/theme.d.ts"]
     },
     "jsx": "react-jsx",
     "strict": true,
     "noEmit": true,
+    "skipLibCheck": true
+
+      "@/*": ["src/*"],
+   
+=======
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "strict": true,
+    "noEmit": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "baseUrl": "src",
+    "paths": {
+      "@theme-types": ["types/theme.d.ts"]
+    }
+>>>>>>> feat/create-theme
   },
   "include": ["src"]
 }

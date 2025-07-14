@@ -7,7 +7,7 @@ import { ThemeProvider } from 'styled-components'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider theme={lightTheme}>
-      <GlobalStyle/>
+      <GlobalStyle />
       <App />
     </ThemeProvider>
   </StrictMode>

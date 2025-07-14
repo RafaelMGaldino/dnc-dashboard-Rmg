@@ -7,10 +7,9 @@ function Home() {
     <>
        <Header/>
        <Container maxWidth='lg'>
-        <CardComponent  className='alert'>Card</CardComponent>
 
        </Container>
-      
+      <h1>Home Page</h1>
     </>
   )
 }

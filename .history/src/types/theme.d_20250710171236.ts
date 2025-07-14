@@ -1,4 +1,7 @@
+
+
 export type Theme = {
+
   appBackground: string
   appColor: string
   appDefaultStroke: string
@@ -30,7 +33,10 @@ export type Theme = {
     disabledBorderColor: string
     disabledColor: string
     placeholder: string
-    placeholderColor: string
+<<<<<<< HEAD
+=======
+    placeholderColor: string;
+>>>>>>> feat/header-component
   }
   typographies: {
     error: string
