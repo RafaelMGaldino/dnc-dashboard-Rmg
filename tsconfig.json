@@ -4,10 +4,10 @@
     "module": "ESNext",
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "moduleResolution": "node",
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@theme-types": ["types/theme.d.ts"]
+      "@theme-types": ["src/types/theme.d.ts"]
     },
     "jsx": "react-jsx",
     "strict": true,
