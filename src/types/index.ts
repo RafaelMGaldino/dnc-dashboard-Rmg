@@ -1,1 +1,6 @@
 export * from './theme'
+export * from './formComponent'
+export * from './styled'
+export * from './typographies'
+export * from './avatarsList'
+export * from './customTable'

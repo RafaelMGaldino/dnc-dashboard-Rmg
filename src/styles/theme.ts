@@ -1,4 +1,5 @@
-import { type Theme } from '@theme-types'
+import { Theme } from '@/types'
+
 
 export const lightTheme: Theme = {
   appBackground: '#FFFFFF',
@@ -13,7 +14,7 @@ export const lightTheme: Theme = {
     alertHover: '#D80000',
     disabled: '#CCCCCC',
     disabledColor: '#666666',
-    primary: '#000CF2',
+    primary: '#0C70F2',
     primaryColor: '#FFFFFF',
     primaryHover: '#0061DE',
   },
@@ -32,28 +33,29 @@ export const lightTheme: Theme = {
     disabledBorderColor: '#E0E0E0',
     disabledColor: '#666666',
     placeholder: '#666666',
+    placeholderColor: '#666666',
   },
   typographies: {
     error: '#FF0202',
     subtitle: '#666666',
-    success: '#00FF00',
+    success: '#008000',
   },
 }
 
 export const darkTheme: Theme = {
   appBackground: '#060B26',
-  appColor: '#FFF',
+  appColor: '#FFFFFF',
   appDefaultStroke: '#21497D',
   appLogo: '/dnc-logo-white.svg',
-  appSkeletonFrom: '#060b26',
-  appSkeletonTo: '#21497d',
+  appSkeletonFrom: '#060B26',
+  appSkeletonTo: '#21497D',
   buttons: {
     alert: '#E80000',
     alertColor: '#FFFFFF',
     alertHover: '#D80000',
     disabled: '#313649',
     disabledColor: '#6D7B8E',
-    primary: '#000CF2',
+    primary: '#0C70F2',
     primaryColor: '#FFFFFF',
     primaryHover: '#0061DE',
   },
@@ -66,16 +68,17 @@ export const darkTheme: Theme = {
   },
   textInput: {
     active: '#0F1535',
-    activeColor: '#FFF',
+    activeColor: '#FFFFFF',
     borderColor: '#21497D',
     disabled: '#282D49',
     disabledBorderColor: '#2E3F55',
     disabledColor: '#58677C',
     placeholder: '#89A7CE',
+    placeholderColor: '#89A7CE',
   },
   typographies: {
     error: '#FF0202',
     subtitle: '#89A7CE',
-    success: '#00FF00',
+    success: '#008000',
   },
 }
