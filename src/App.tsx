@@ -3,7 +3,7 @@ import Cookies from 'js-cookie'
 import { Home, Leads, Login, Profile, Registration } from './pages'
 
 function App() {
-  const ProtectedRoute = () => {
+  const ProtectedRoute = () => {   // Check if the user is authenticated
     const checkAuthCookie = Cookies.get('Authorization')
     if (!checkAuthCookie) {
       alert('Você precisa estar logado para acessar essa página')
