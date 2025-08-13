@@ -1,12 +1,70 @@
+import { ChangeEvent, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { jwtDecode } from 'jwt-decode'
+// COMPONENTS
 import { Box, Container, Grid } from '@mui/material'
-import { BannerImage, FormComponent, Logo, StyledH1, StyledP } from '@/components'
-import { pxToRem } from '@/utils'
+import { BannerImage,FormComponent,Logo,StyledH1, StyledP} from '@/components'
+//UTILS
+import { jwtExpirationDateConverter, pxToRem } from '@/utils'
+
+// Hooks
+import { useFormValidation, usePost } from '@/hooks'
+// Types
+import { DecodedJwt ,MenssageProps, LoginData, LoginPostData } from '@/types'
+import Cookies from 'js-cookie'
 
 function Login() {
+  const navigate = useNavigate()
+  const inputs = [
+    { type: 'email', placeholder: 'Email' },
+    { type: 'password', placeholder: 'Senha' },
+  ]
+
+  const { data, loading, error, postData } = usePost<LoginData, LoginPostData>('login')
+  const { formValues, formValid, handleChange } = useFormValidation(inputs)
+
+  
+  const handleMessage = (): MenssageProps => {
+    if (!error) return { msg: '', type: 'success' }
+
+    switch (error) {
+      case 401:
+        return {
+           msg: 'Email ou senha inválidos',
+           type: 'error'
+           }
+      default:
+        return {
+          msg: 'Não foi possível realizar a operação, entre em contato com nosso suporte',
+          type: 'error',
+        }
+    }
+  }
+
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    await postData({
+      email: String(formValues[0]),
+      password: String(formValues[1]),
+    })
+  }
+
+  useEffect(() => {
+    if (data?.jwt_token) {
+      const decoded: DecodedJwt = jwtDecode(data?.jwt_token)
+      Cookies.set('Authorization', data?.jwt_token,{
+        expires: jwtExpirationDateConverter(decoded.exp),
+        secure: true,
+      })
+    }
+   if (Cookies.get ('Authorization'))  navigate('/home')
+      
+  }, [data, navigate])
+
   return (
     <Box sx={{ height: '100vh', width: '100vw', overflow: 'hidden' }}>
       <Grid container sx={{ height: '100vh', width: '100vw' }}>
-        {/* Lado esquerdo: formulário de login */}
         <Grid
           component="div"
           sx={{
@@ -27,22 +85,26 @@ function Login() {
             </Box>
 
             <FormComponent
-              inputs={[
-                { type: 'email', placeholder: 'Email' },
-                { type: 'password', placeholder: 'Senha' },
-              ]}
+              inputs={inputs.map((input, index) => ({
+                type: input.type,
+                placeholder: input.placeholder,
+                value: formValues[index] || '',
+                onChange: (e: ChangeEvent<HTMLInputElement>) => handleChange(index, (e.target as HTMLInputElement).value)
+              }))}
               buttons={[
-                { className: 'primary', type: 'submit', children: 'Login' },
+                {
+                  className: 'primary',
+                  disabled: !formValid || loading,
+                  type: 'submit',
+                  children: loading ? 'Aguarde...' : 'Login',
+                  onClick: handleSubmit,
+                },
               ]}
-              message={{
-                msg: 'Sucesso!!!',
-                type: 'success',
-              }}
+              message={handleMessage()}
+              
             />
           </Container>
         </Grid>
-
-        {/* Lado direito: imagem do banner */}
         <Grid
           component="div"
           sx={{
