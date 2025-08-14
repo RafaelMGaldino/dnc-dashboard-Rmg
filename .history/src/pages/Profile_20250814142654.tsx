@@ -3,8 +3,6 @@ import { AppThemeContext } from '@/contexts/AppThemeContext'
 // Components
 import { CardComponent, Header, StyledH2, StyledButton } from '@/components'
 import { Box, Container, Grid } from '@mui/material'
-// Services
-import { logout } from '@/services'
 
 function Profile() {
   const themeContext = useContext(AppThemeContext)
@@ -14,6 +12,7 @@ function Profile() {
       <Header />
       <Box sx={{ width: '100%', minHeight: '100vh', p: 2 }}>
         <Grid container sx={{ width: '100%', gap: 4 }}>
+          {/* Primeiro card */}
           <Grid
             component="div"
             sx={{
@@ -25,6 +24,8 @@ function Profile() {
           >
             <CardComponent>Seus Dados...</CardComponent>
           </Grid>
+
+          {/* Segundo card */}
           <Grid
             component="div"
             sx={{
@@ -43,7 +44,7 @@ function Profile() {
                 Trocar para Tema{' '}
                 {themeContext?.appTheme === 'light' ? 'escuro' : 'claro'}
               </StyledButton>
-              <StyledButton className='alert' onClick={logout}>Logout</StyledButton>
+              <StyledButton className='alert'>Logout</StyledButton>
             </CardComponent>
           </Grid>
         </Grid>
