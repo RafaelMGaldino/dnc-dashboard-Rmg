@@ -53,7 +53,7 @@ function Home() {
   return (
     <>
       <Header />
-      <Container className='mb-1'maxWidth="lg">
+      <Container className='mb-2'maxWidth="lg">
         <Grid container sx={{ width: '100%', gap: 4, alignItems: 'stretch' }}>
           {!highlightsError && (
             <>
