@@ -5,6 +5,7 @@ import { pxToRem } from '@/utils'
 export const TableWrapper = styled.div`
   overflow-x: auto;
   width: 100%;
+
   table {
     width: 100%;
     border-collapse: collapse;
@@ -44,8 +45,8 @@ export const TableWrapper = styled.div`
       border-bottom: ${pxToRem(1)} solid
         ${(props) => props.theme.appDefaultStroke};
     }
-  }
-`
+
+
 
 function CustomTable(props: CustomTableProps) {
   const { headers, rows } = props
@@ -55,7 +56,6 @@ function CustomTable(props: CustomTableProps) {
         <thead>
           <tr>
             {headers.map((header, index) => (
-              <th key={index}>{header}</th>
             ))}
           </tr>
         </thead>
@@ -63,9 +63,7 @@ function CustomTable(props: CustomTableProps) {
           {rows.map((row, rowIndex) => (
             <tr key={rowIndex}>
               {row.map((cell, cellIndex) => (
-                <td key={cellIndex}>
-                  <span className="ellipsis ellipsis-sm">{cell}</span>
-                </td>
+
               ))}
             </tr>
           ))}
@@ -75,4 +73,4 @@ function CustomTable(props: CustomTableProps) {
   )
 }
 
-export default CustomTable
+

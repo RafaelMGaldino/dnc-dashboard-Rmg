@@ -1,3 +1,4 @@
+
 //components
 import {
   AvatarList,
@@ -74,7 +75,6 @@ function Home() {
                   )}
                 </CardComponent>
               </Grid>
-
               <Grid
                 component="div"
                 sx={{width: { xs: '100%', md: '30%' },display: 'flex', alignItems: 'center',justifyContent: 'center',}}
