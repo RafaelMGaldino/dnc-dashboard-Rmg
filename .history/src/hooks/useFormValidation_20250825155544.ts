@@ -8,7 +8,7 @@ export const useFormValidation = (inputs: InputProps[]) => {
 
     useEffect(() => {
          const allFieldsValid = inputs.every((input, index) => {
-          const value = formValues[index]
+          const value = formValues[]
             if(input.required && !value){
                 return false
             }

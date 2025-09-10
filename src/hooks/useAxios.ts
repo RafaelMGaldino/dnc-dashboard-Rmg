@@ -80,3 +80,70 @@ export const useGet = <T>(endpoint: string, config?: AxiosRequestConfig) => {
 
   return { data, loading, error, getData }
 }
+
+export const usePut = <T>(endpoint: string) => {
+  const [data, setData] = useState<T | null>(null)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<number | null>(null) 
+
+  const putData = async (putData: T, config?: AxiosRequestConfig) => {
+    setData(null)
+    setLoading(true)
+    setError(null)
+
+    console.log(import.meta.env.VITE_API_BASE_URL)
+
+    try {
+      const response = await axioInstance({
+        url: endpoint,
+        method: 'PUT',
+        data: putData,
+        headers: {
+          'Authorization': `Bearer ${Cookies.get('Authorization')}`,
+          'Content-Type': 'application/json', 
+          ...config?.headers,
+        },
+        ...config,
+      })
+      setData(response.data)
+    } catch (e: any) { 
+      setError(e.response?.status ?? 500)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  return { data, loading, error, putData }
+}
+
+export const useDelete = <T>(endpoint: string) => {
+  const [data, setData] = useState<T | null>(null)
+  const [loading, setLoading] = useState(false)
+  
+  const deleteData = async (config?: AxiosRequestConfig) => {
+    setData(null)
+    setLoading(true)
+   
+    console.log(import.meta.env.VITE_API_BASE_URL)
+
+    try {
+      const response = await axioInstance({
+        url: endpoint,
+        method: 'DELETE',
+        data: deleteData,
+        headers: {
+          'Authorization': `Bearer ${Cookies.get('Authorization')}`, 
+          ...config?.headers,
+        },
+        ...config,
+      })
+      setData(response.data)
+    } catch (e: any) { 
+      throw e.response?.status
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  return { data, loading, deleteData }
+}
