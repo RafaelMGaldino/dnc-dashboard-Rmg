@@ -9,6 +9,8 @@ import {
   StyledH3,
   StyledSpan,
 } from '@/components'
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 import { Container, Grid, Box } from '@mui/material'
 //hooks
 import { useGet } from '@/hooks'
@@ -110,11 +112,14 @@ function Home() {
                   }
                 >
                   {!highlightsLoading && highlightsData && (
-                    <>
+                   
+                    <Link to="/leads">
                       <StyledH2 className="mb-1">Leads contactados</StyledH2>
                       <StyledH3  size={40} lineHeight={40}> {highlightsData[2].value} </StyledH3>
                       <StyledSpan>{highlightsData[2].subtitle}</StyledSpan>
-                    </>
+                    
+                    </Link>
+                    
                   )}
                 </CardComponent>
               </Grid>
